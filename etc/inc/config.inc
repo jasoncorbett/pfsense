@@ -206,7 +206,7 @@ if (!$timezone)
 date_default_timezone_set("$timezone");
 
 /* compatibility with older configs using vlan "tags" */	
-if (($config['version'] < 11) && (is_array($config['vlans']['vlan']) && count($config['vlans']['vlan'])) {
+if (($config['version'] < 11) && (is_array($config['vlans']['vlan']) && count($config['vlans']['vlan']))) {
 	foreach ($config['vlans']['vlan'] as &$vlan) {
 		if (empty($vlan['vid']) && !empty($vlan['tag'])) {
 			$vlan['vid']  =  $vlan['tag'];
