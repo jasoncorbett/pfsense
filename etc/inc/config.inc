@@ -213,6 +213,7 @@ if (($config['version'] < 11) && (is_array($config['vlans']['vlan']) && count($c
 			unset($vlan['tag']);
 		}
 	}
+}
 
 if($config_parsed == true) {
 	/* process packager manager custom rules */
